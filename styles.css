@@ -1,0 +1,285 @@
+:root {
+    --background-primary: #f0f0f3;
+    --background-secondary: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-primary: #ff4081;
+    --accent-secondary: #ff80ab;
+    --shadow-light: #ffffff;
+    --shadow-dark: #d1d9e6;
+    /* --shadow-dark: #aeb9ca; */
+    --border-radius: 12px;
+}
+
+* {
+    font-size: 16px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "urbanist";
+    width: 100vw;
+    height: 100%;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.head {
+    padding: 3rem 0 1.5rem;
+}
+
+.head-heading {
+    font-family: Unbounded;
+    font-size: 1.85rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-top: 1.625rem;
+}
+
+.head-subheading {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: "urbanist", sans-serif;
+    color: var(--text-secondary);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    text-align: center;
+}
+
+.form-in {
+    background-color: var(--background-secondary);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow:
+        9px 9px 16px var(--shadow-dark),
+        -9px -9px 16px var(--shadow-light);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: all 0.6s ease;
+}
+.form-in:hover {
+    box-shadow:
+        10px 10px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+    transform: translateY(-0.625rem);
+}
+.user-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-family: "Unbounded";
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+input {
+    padding: 0.75rem;
+    font-family: "urbanist";
+    border-radius: var(--border-radius);
+    border: none;
+    background: var(--background-primary);
+    box-shadow:
+        inset 3px 3px 6px var(--shadow-dark),
+        inset -3px -3px 6px var(--shadow-light);
+    font-size: 1rem;
+    color: var(--text-primary);
+    outline: none;
+    width: 90%;
+    transition: all 0.6s ease;
+}
+
+input:focus {
+    background-color: var(--background-primary);
+    box-shadow:
+        inset 6px 6px 12px var(--shadow-dark),
+        inset -6px -6px 12px var(--shadow-light);
+}
+
+input::placeholder {
+    color: var(--text-secondary);
+    transition: opacity 0.6s ease;
+}
+.coloured-placeholder::placeholder {
+    opacity: 0.25;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 0.75rem 2rem;
+    border-radius: var(--border-radius);
+    border: none;
+    background: var(--accent-primary);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow:
+        4px 4px 8px var(--shadow-dark),
+        -4px -4px 8px var(--shadow-light);
+    cursor: pointer;
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: var(--accent-secondary);
+    transform: scale(1.05);
+    box-shadow:
+        3px 3px 6px var(--shadow-dark),
+        -3px -3px 6px var(--shadow-light);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow:
+        inset 2px 2px 4px var(--shadow-dark),
+        inset -2px -2px 4px var(--shadow-light);
+}
+
+.guess-slot {
+    background-color: var(--background-secondary);
+    padding: 0 2rem;
+    border-radius: var(--border-radius);
+    box-shadow:
+        9px 9px 16px var(--shadow-dark),
+        -9px -9px 16px var(--shadow-light);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 9rem;
+    transition: all 0.6s ease;
+}
+.guess-slot:hover {
+    box-shadow:
+        10px 10px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+    transform: translateY(-0.625rem);
+}
+
+.guess-history {
+    padding: 0.1rem;
+    border-radius: var(--border-radius);
+    background: var(--background-primary);
+    box-shadow:
+        inset -3px -3px 6px var(--shadow-dark),
+        inset 3px 3px 6px var(--shadow-light);
+    color: var(--text-secondary);
+    width: 85%;
+}
+
+.guess-label {
+    font-family: "Unbounded";
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-top: 0.5rem;
+    line-height: 1rem;
+}
+
+.previous-guess {
+    padding: 0 1rem;
+}
+
+.try-label {
+    font-family: "Unbounded";
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-top: 0.5rem;
+    line-height: 1rem;
+}
+
+#try-left {
+    font-family: "urbanist";
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.1rem;
+    padding-left: 0.41rem;
+    padding-right: 0.41rem;
+    box-shadow:
+        inset 3px 3px 6px var(--shadow-light),
+        inset -3px -3px 6px var(--shadow-dark);
+    background: var(--background-secondary);
+    border-radius: var(--border-radius);
+}
+
+.message {
+    padding: 0 0.5rem;
+    border-radius: var(--border-radius);
+    background: var(--background-secondary);
+    box-shadow:
+        inset -3px -3px 6px var(--shadow-light),
+        inset 3px 3px 6px var(--shadow-dark);
+    color: var(--text-secondary);
+    width: 80%;
+    margin-left: 1rem;
+    /* align-self :center */;
+}
+
+.reset-para {
+    font-family: "urbanist";
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-top: 0.3rem;
+    line-height: 1rem;
+    letter-spacing: 0.05rem;
+}
+
+.foot {
+    padding: 0.1rem 0 0.5rem;
+    text-align: center;
+    font-family: "urbanist";
+    font-weight: 400;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--background-secondary);
+    font-size: 0.625rem;
+}
+
+.start-over {
+    transition: all 0.5s ease;
+}
+
+/* //new */
+
+.message {
+    animation: message 0.4s ease-in-out;
+}
+a @keyframes message {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

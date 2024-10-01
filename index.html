@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- comment the purpose of section -->
+
+    <div class="container">
+      <!-- headings -->
+      <div class="head">
+        <h1 class="head-heading">Guess the Number</h1>
+        <p class="head-subheading">
+          Take a shot at predicting the secret number: 1 to 100
+        </p>
+      </div>
+
+      <!-- main body -->
+      <div class="main">
+        <!-- form container -->
+        <div class="form-full">
+          <!-- user input form -->
+          <form class= form-in>
+            <div class="user-input">
+              <label for="guess"
+                >What's Your Number?
+                <input
+                  type="number"
+                  id="guess"
+                  name="guess"
+                  placeholder="Type your best guess..."
+                  required
+                />
+              </label>
+            </div>
+
+            <!-- submit button -->
+            <div class="submit-button">
+              <button type="submit" id="submit" class='pale'>Lock It In!</button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- message -->
+        <div class="message">
+          <p id="message">Start guessing!</p>
+        </div>
+
+        <!-- guees slot -->
+        <div class="guess-slot">
+          <!-- previous guess -->
+          <div class="guess-label">
+            <p>Your guesses so far:</p>
+          </div>
+          
+          <!-- previous guess history -->
+          <div class="guess-history">
+            <p id="previous-guess">None yet. C'mon, take a guess!</p>
+          </div>
+        </div>
+
+        <!-- remaining attempt -->
+        <div class="remaining-attemt">
+          <p class="try-label">
+            Tries Left: <span id="try-left">Still plenty of chances!</span>
+          </p>
+        </div>
+
+
+        <!-- start over -->
+        <div class="start-over">
+          <button class="reset-game">Reset the game</button>
+          <p class="reset-para">Want to go again?</p>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="foot">
+        <p class="footer">
+          Guess smart, play fair. The secret number is waiting!
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
