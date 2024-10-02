@@ -62,6 +62,7 @@ body {
     flex-direction: column;
     gap: 2.25rem;
     text-align: center;
+    align-items: center;
 }
 
 .form-in {
